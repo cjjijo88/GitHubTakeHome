@@ -38,7 +38,7 @@ Dependencies:
 - Data Binding: Used to bind UI components in layouts to data sources in the app.
 - Dagger 2: Used for dependency injection to improve code scalability and maintainability.
 
-Contributors:
+Contributor:
 
 - Jijo Chittaruvickal Joy - Developer
 
