@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.GitHubTakeHome" parent="android:Theme.Material.Light.NoActionBar" />
+    <!--<style name="Theme.GitHubTakeHome" parent="android:Theme.Material.Light.NoActionBar" />-->
+
+    <style name="Theme.GitHubTakeHome" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Style for the TextInputLayout -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+
+        <!-- Style for the TextInputEditText -->
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox</item>
+    </style>
+
+    <!-- Style for the TextInputLayout -->
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <!-- Customize the bottom line color -->
+        <item name="boxStrokeColor">@color/grey_02</item>
+        <item name="boxStrokeWidth">@dimen/dp_2</item> <!-- Adjust the stroke width as needed -->
+    </style>
+
+    <!-- Style for the TextInputEditText -->
+    <style name="Widget.MaterialComponents.TextInputEditText.OutlinedBox" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <!-- Customize the bottom line color when focused -->
+        <item name="backgroundTint">@color/pink_01</item>
+    </style>
+
+
+    <style name="Button">
+        <item name="android:layout_marginStart">@dimen/dp_10</item>
+        <item name="android:layout_marginEnd">@dimen/dp_8</item>
+        <item name="android:backgroundTint">@color/grey_01</item>
+        <item name="android:textColor">@android:color/black</item>
+
+    </style>
+
+    <style name="TextView">
+        <!--<item name="android:textColor">@android:color/black</item>-->
+        <item name="android:layout_marginStart">@dimen/dp_10</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+
+    <style name="TextView_001" parent="TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="TextView_002" parent="TextView">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TextView_heading_001" parent="TextView">
+        <item name="android:textSize">@dimen/dp_20</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="HintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/pink_01</item>
+        <item name="android:animation">@anim/slide_up</item>
+    </style>
 </resources>

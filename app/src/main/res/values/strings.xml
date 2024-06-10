@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">GitHubTakeHome</string>
+    <string name="app_name">TakeHome</string>
+    <string name="btn_search">Search</string>
+    <string name="hint_enter_user_id">Enter a github user id</string>
+    <string name="toast_enter_user_id">Enter a github user id</string>
+    <string name="forks_count">Count %s</string>
+    <string name="repo_details">Repo Details</string>
 </resources>

@@ -1,6 +1,9 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -20,6 +23,7 @@ android {
         }
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -38,6 +42,7 @@ android {
     }
     buildFeatures {
         compose = true
+        dataBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -59,7 +64,25 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.constraint.layout)
+    implementation(libs.androidx.material)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.viewmodel)
+    implementation(libs.androidx.livedata)
+    implementation(libs.androidx.databinding)
+    implementation(libs.google.dagger)
+    implementation(libs.squareup.retrofit)
+    implementation(libs.squareup.retrofit.gson.convertor)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
+    implementation(libs.github.glide)
+    implementation(libs.androidx.junit.ktx)
+    kapt(libs.dagger.compiler)
     testImplementation(libs.junit)
+    testImplementation(libs.org.mockito)
+    testImplementation(libs.org.mockito.inline)
+    testImplementation(libs.androidx.arch.core)
+    testImplementation(libs.jetbrain.kotlin.coroutine.test)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

@@ -8,6 +8,24 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.8.0"
 activityCompose = "1.9.0"
 composeBom = "2023.08.00"
+constraintLayout = "2.1.4"
+material = "1.4.0"
+cardview = "1.0.0"
+daggerVersion = "2.46"
+retrofit = "2.9.0"
+retrofitGsonConvertor = "2.9.0"
+viewModel = "2.5.1"
+liveData = "2.5.1"
+appcompat = "1.6.1"
+activity = "1.9.0"
+dtatbindingVersion = "4.1.3"
+glideVersion = "4.11.0"
+mockitoVersion = "3.11.2"
+archCoreTesting = "2.1.0"
+mockitoInline = "3.11.2"
+kotlinCoroutineTest = "1.5.2"
+junitKtx = "1.1.5"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +42,29 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
+androidx-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-viewmodel= { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewModel" }
+androidx-livedata= { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "liveData" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-databinding = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dtatbindingVersion" }
+androidx-arch-core = { group = "androidx.arch.core", name = "core-testing", version.ref = "archCoreTesting" }
+google-dagger = { group = "com.google.dagger", name = "dagger", version.ref = "daggerVersion" }
+squareup-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+squareup-retrofit-gson-convertor = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitGsonConvertor" }
+github-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion" }
+org-mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockitoVersion" }
+org-mockito-inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockitoInline" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "daggerVersion" }
+jetbrain-kotlin-coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinCoroutineTest" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 

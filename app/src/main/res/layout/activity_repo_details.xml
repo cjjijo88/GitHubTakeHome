@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="repo"
+            type="com.assignment.githubtakehome.model.RepoData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvRepoTitle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".60"
+            style="@style/TextView_heading_001"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{repo.repoName}"/>
+
+        <TextView
+            android:id="@+id/tvForksCount"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".30"
+            style="@style/TextView_heading_001"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvRepoTitle"
+            android:text='@{String.format("Count: %s", repo.forks)}'/>
+
+        <TextView
+            android:id="@+id/tvUpdatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView_002"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@{repo.updatedAt}"/>
+
+        <TextView
+            android:id="@+id/tvRepoDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView"
+            android:singleLine="false"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUpdatedAt"
+            android:text="@{repo.description}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
